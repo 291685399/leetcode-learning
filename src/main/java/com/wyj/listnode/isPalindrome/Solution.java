@@ -2,6 +2,12 @@ package com.wyj.listnode.isPalindrome;
 
 import java.util.Stack;
 
+/**
+ * 回文链表具体实现
+ *
+ * @author wyj
+ * @create 2019-05-08 14:00
+ */
 public class Solution {
     public boolean isPalindrome(ListNode head) {
         ListNode fast = head;

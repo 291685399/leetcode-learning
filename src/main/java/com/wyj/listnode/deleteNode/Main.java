@@ -1,14 +1,17 @@
-package com.wyj.listnode.reverseList;
+package com.wyj.listnode.deleteNode;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * 反转链表测试类
+ * 删除链表测试类
  *
  * @author wyj
- * @create 2019-05-06 20:22
+ * @create 2019-05-08 14:00
  */
 public class Main {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5};
+        int[] arr = {4, 5, 1, 9};
         ListNode head = new ListNode(arr[0]);
         ListNode first = head;
         for (int i = 1; i < arr.length; i++) {
@@ -16,13 +19,16 @@ public class Main {
             first.next = nextHead;
             first = nextHead;
         }
+        ListNode node = head.next;
         //测试
         Solution solution = new Solution();
-        ListNode reverseHead = solution.reverseList(head);
+        solution.deleteNode(node);
         //打印结果
-        while (reverseHead != null) {
-            System.out.println("reverseHead:" + reverseHead.val);
-            reverseHead = reverseHead.next;
+        List<Integer> list = new ArrayList<>();
+        while (head != null) {
+            list.add(head.val);
+            head = head.next;
         }
+        System.out.println(list);
     }
 }
