@@ -6,7 +6,7 @@ package com.wyj.listnode.reverseList;
  * @author wyj
  * @create 2019-05-06 20:00
  */
-public class Test {
+public class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode reverseHead = null;
         while (head != null) {
